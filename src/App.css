@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+html,
+body {
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  min-height: 99%;
+  background: -webkit-linear-gradient(
+      315deg,
+      hsla(112.5, 69.5%, 78.49%, 1) 0%,
+      hsla(112.5, 69.5%, 78.49%, 0) 70%
+    ),
+    -webkit-linear-gradient(65deg, hsla(188.15, 38.53%, 64.41%, 1) 10%, hsla(
+            188.15,
+            38.53%,
+            64.41%,
+            0
+          )
+          80%),
+    -webkit-linear-gradient(135deg, hsla(198.24, 41.79%, 55.49%, 1) 15%, hsla(
+            198.24,
+            41.79%,
+            55.49%,
+            0
+          )
+          80%),
+    -webkit-linear-gradient(205deg, hsla(112.65, 17.66%, 70.49%, 1) 100%, hsla(
+            112.65,
+            17.66%,
+            70.49%,
+            0
+          )
+          70%);
+  background: linear-gradient(
+      135deg,
+      hsla(112.5, 69.5%, 78.49%, 1) 0%,
+      hsla(112.5, 69.5%, 78.49%, 0) 70%
+    ),
+    linear-gradient(
+      25deg,
+      hsla(188.15, 38.53%, 64.41%, 1) 10%,
+      hsla(188.15, 38.53%, 64.41%, 0) 80%
+    ),
+    linear-gradient(
+      315deg,
+      hsla(198.24, 41.79%, 55.49%, 1) 15%,
+      hsla(198.24, 41.79%, 55.49%, 0) 80%
+    ),
+    linear-gradient(
+      245deg,
+      hsla(112.65, 17.66%, 70.49%, 1) 100%,
+      hsla(112.65, 17.66%, 70.49%, 0) 70%
+    );
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: small !important;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: small !important;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: small !important;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: small !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-group {
+  width: 100%;
 }
