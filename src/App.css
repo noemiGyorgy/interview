@@ -1,38 +1,123 @@
-.App {
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 99%;
+  background: #1e3c72; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #216ba5,
+    #1e3c72
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #216ba5,
+    #1e3c72
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card input,
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: small !important;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: small !important;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: small !important;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: small !important;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100% !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 0.25rem !important;
+  padding: 6px 12px 6px 12px;
+}
+
+.label,
+.form-label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: x-small !important;
+  letter-spacing: 1px;
+  color: #1e3c72;
+}
+
+.label {
+  width: 240px;
+}
+.react-datepicker__input-container input {
+  font-size: small !important;
+  color: #495057;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+h3 {
+  color: #216ba5;
+}
+
+.primary-button {
+  background-color: #216ba5;
+  border: none;
+}
+.primary-button:hover,
+.primary-button:focus,
+.primary-button:active,
+.primary-button:visited {
+  background-color: #1e3c72;
+}
+
+.click-drop {
+  border: 2px dashed #216ba5;
   text-align: center;
+  width: 100%;
+  font-size: small;
+  color: #216ba5;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.upload__image-wrapper button {
+  border: none;
+  background: none;
+  box-shadow: none;
+  font-size: small;
+  color: #495057;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#remove-all {
+  border: 1px solid #495057;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.drop-area {
+  max-width: 100%;
+  height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.form-row {
+  padding: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img-thumbnail {
+  max-width: 300px;
+  padding: 5px;
+  margin: 5px;
 }
