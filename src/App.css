@@ -47,12 +47,17 @@ body {
   padding: 6px 12px 6px 12px;
 }
 
+.label,
 .form-label {
   text-transform: uppercase;
   font-weight: bold;
   font-size: x-small !important;
   letter-spacing: 1px;
   color: #1e3c72;
+}
+
+.label {
+  width: 240px;
 }
 .react-datepicker__input-container input {
   font-size: small !important;
@@ -109,4 +114,10 @@ h3 {
 
 .form-row {
   padding: 10px 0;
+}
+
+.img-thumbnail {
+  max-width: 300px;
+  padding: 5px;
+  margin: 5px;
 }

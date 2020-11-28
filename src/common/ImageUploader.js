@@ -21,6 +21,7 @@ function ImageUploader() {
         value={images}
         onChange={onChange}
         maxNumber={maxNumber}
+        span
         dataURLKey="data_url"
         maxFileSize={maxFileSize}
       >

@@ -1,13 +1,19 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
 import RegistrationForm from "./pages/RegistrationForm";
+import PersonalData from "./pages/PersonalData";
+import Switch from "react-bootstrap/esm/Switch";
+import history from "./common/history";
 
 function App() {
   return (
     <React.Fragment>
-      <Router>
-        <Route exact path="/" component={RegistrationForm} />
+      <Router history={history}>
+        <Switch>
+          <Route exact path="/" component={RegistrationForm} />
+          <Route exact path="/data" component={PersonalData} />
+        </Switch>
       </Router>
     </React.Fragment>
   );

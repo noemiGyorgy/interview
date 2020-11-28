@@ -1,22 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Button, Container, Card, Row, Col } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ImageUploader from "../common/ImageUploader";
+import history from "../common/history";
+import { DataContext } from "../context/DataContext";
 
 function RegistrationForm() {
+  const dataContext = useContext(DataContext);
   const [validated, setValidated] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [birthDate, setBirthDate] = useState(null);
   const [registrationDate, setRegistrationDate] = useState(null);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
+    console.log(form.checkValidity());
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
-    }
+    } else {
+      let data = {
+        firstName: firstName,
+        lastName: lastName,
+        birthDate: birthDate,
+      };
+      dataContext.setUserData(data);
+      console.log(dataContext.userData);
+      console.log(data);
 
+      history.push("/data");
+    }
     setValidated(true);
   };
 
@@ -28,13 +44,14 @@ function RegistrationForm() {
             <Card className="p-3" style={{ width: "100%" }}>
               <h3 className="text-center m-3 mb-4">Registration</h3>
               <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                <Form.Label className="m-0">Name*</Form.Label>
+                <Form.Label className="m-0">Name *</Form.Label>
                 <Form.Row>
                   <Form.Group as={Col} controlId="validationFirstName">
                     <Form.Control
                       required
                       type="text"
                       placeholder="First name"
+                      onChange={(firstName) => setFirstName(firstName)}
                     />
                     <Form.Control.Feedback type="invalid">
                       Please enter your first name.
@@ -46,6 +63,7 @@ function RegistrationForm() {
                       required
                       type="text"
                       placeholder="Last name"
+                      onChange={(lastName) => setLastName(lastName)}
                     />
                     <Form.Control.Feedback type="invalid">
                       Please enter your last name.
