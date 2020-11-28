@@ -5,54 +5,20 @@ body {
 
 body {
   min-height: 99%;
+  background: #1e3c72; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-      315deg,
-      hsla(112.5, 69.5%, 78.49%, 1) 0%,
-      hsla(112.5, 69.5%, 78.49%, 0) 70%
-    ),
-    -webkit-linear-gradient(65deg, hsla(188.15, 38.53%, 64.41%, 1) 10%, hsla(
-            188.15,
-            38.53%,
-            64.41%,
-            0
-          )
-          80%),
-    -webkit-linear-gradient(135deg, hsla(198.24, 41.79%, 55.49%, 1) 15%, hsla(
-            198.24,
-            41.79%,
-            55.49%,
-            0
-          )
-          80%),
-    -webkit-linear-gradient(205deg, hsla(112.65, 17.66%, 70.49%, 1) 100%, hsla(
-            112.65,
-            17.66%,
-            70.49%,
-            0
-          )
-          70%);
+    to left,
+    #216ba5,
+    #1e3c72
+  ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-      135deg,
-      hsla(112.5, 69.5%, 78.49%, 1) 0%,
-      hsla(112.5, 69.5%, 78.49%, 0) 70%
-    ),
-    linear-gradient(
-      25deg,
-      hsla(188.15, 38.53%, 64.41%, 1) 10%,
-      hsla(188.15, 38.53%, 64.41%, 0) 80%
-    ),
-    linear-gradient(
-      315deg,
-      hsla(198.24, 41.79%, 55.49%, 1) 15%,
-      hsla(198.24, 41.79%, 55.49%, 0) 80%
-    ),
-    linear-gradient(
-      245deg,
-      hsla(112.65, 17.66%, 70.49%, 1) 100%,
-      hsla(112.65, 17.66%, 70.49%, 0) 70%
-    );
+    to left,
+    #216ba5,
+    #1e3c72
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.card input,
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-size: small !important;
@@ -72,4 +38,75 @@ body {
 
 .form-group {
   width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100% !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 0.25rem !important;
+  padding: 6px 12px 6px 12px;
+}
+
+.form-label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: x-small !important;
+  letter-spacing: 1px;
+  color: #1e3c72;
+}
+.react-datepicker__input-container input {
+  font-size: small !important;
+  color: #495057;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+h3 {
+  color: #216ba5;
+}
+
+.primary-button {
+  background-color: #216ba5;
+  border: none;
+}
+.primary-button:hover,
+.primary-button:focus,
+.primary-button:active,
+.primary-button:visited {
+  background-color: #1e3c72;
+}
+
+.click-drop {
+  border: 2px dashed #216ba5;
+  text-align: center;
+  width: 100%;
+  font-size: small;
+  color: #216ba5;
+  cursor: pointer;
+}
+
+.upload__image-wrapper button {
+  border: none;
+  background: none;
+  box-shadow: none;
+  font-size: small;
+  color: #495057;
+}
+
+#remove-all {
+  border: 1px solid #495057;
+  padding: 5px 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.drop-area {
+  max-width: 100%;
+  height: auto;
+}
+
+.form-row {
+  padding: 10px 0;
 }
